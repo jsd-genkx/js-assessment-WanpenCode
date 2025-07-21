@@ -14,9 +14,6 @@ const pathCharacter = "*";
 class Field {
 	constructor(field = [[]]) {
 		this.field = field;
-
-		// Replace with your own code //
-		// Set the home position at (0, 0) before the game starts
 		this.positionRow = 0;
 		this.positionCol = 0;
 		this.field[this.positionRow][this.positionCol] = pathCharacter;
@@ -25,9 +22,60 @@ class Field {
 	// Print field //
 	print() {
 		clear();
+	for (let i= 0; i ,this.field.length; i++) {
+		let rowString = '';
+		for (let j = 0; j , this.field[i].length; j++) {
+			rowString += this.field[i][j];
+		}
+		console.log(rowString);
+	}
+	}
+moveLeft() {
+		this.positionCol = this.positionCol -1;
+	}
+moveRight() {
+		this.positionCol = this.positionCol +1;
+	}
+moveUp() {
+		this.positionRow = this.positionRow -1;
+	}
+moveDown() {
+		this.positionRow = this.positionRow +1;
+	}
+checkCondition(positionRow, positionCol) {
+		if (this.field[positionRow][positionCol] === hole) {
+			return 'hat';
+		}
+		return 'safe';
+	}
 
-		// Replace with your own code //
-		console.log(this.field); // Please REMOVE this line before you start your code!
+const direction = prompt("Which way?")
+move(direction) {
+	if (direction === "l") {
+		this.moveLeft();
+	}
+	else if (direction === "r") {
+		this.moveRight()
+	}
+	else if (direction) === "u") {
+		this.moveUp()
+	}
+	else if (direction === "d") {
+		this.moveDown();
+	}
+	this.field[this.positionRow][this.positionCol] = pathCharacter;
+}
+
+
+ for (let i = 0; i <this.field.length; i++){
+	let rowString = '';
+for (let j = 0; j <this.field[i].length; j++) {
+	rowString += this.field[i][j];
+}
+console.log(rowString);
+ }
+
+	}
 	}
 
 	// Your Code //
@@ -40,4 +88,7 @@ const newGame = new Field([
 	["░", "O", "░"],
 	["░", "^", "░"],
 ]);
+
+
 newGame.print();
+
