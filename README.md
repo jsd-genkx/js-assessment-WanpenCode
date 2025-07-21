@@ -127,7 +127,8 @@
 
 **Please Write Down Your Thinking Process Below:**
 
----
+**see my thinking process flow diagram**
+[Game flow on Draw.io] (https://drive.google.com/file/d/1aaBqxi9qwAPgadgk4lwNdSTWr6-b7uKL/view?usp=sharing)
 
 ### Thinking Process
 
